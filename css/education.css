@@ -1,0 +1,766 @@
+*{
+    box-sizing: border-box;
+}
+
+/* body */
+
+Body{
+    /*background-color: #474d5d;*/
+    margin: 0;
+    height: 100%;
+    font-family: 'segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url(../photo/sun.png);
+    background-attachment: fixed;
+    background-size: contain;
+    position: relative;
+    height: 100vh;
+
+}
+body>.overlay{
+    position: absolute;
+    top:auto;
+    right: auto;
+    width: 100%;
+    height: 100%;
+    /*opacity: 0.5;*/
+    z-index: -1;
+}
+
+/*header nav*/
+
+ul{
+    padding: 0;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+ul li{
+
+    list-style: none;
+    padding: 15px;
+}
+
+ul li a{
+    text-decoration: none;
+    font-size: 1.1rem;
+    color: #111;
+    position: relative;
+}
+
+ul li a:before{
+    content: '';
+    width: 0;
+    height: 2px;
+    background: #00bcd4;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    transition: .5s;
+}
+
+ul li:hover a:before{
+    width: 50%;
+    transform: translateX(100%);
+    background-color: #4CAF50;
+}
+
+
+h1, h3 {
+    margin: 0;
+    font-weight: 400;
+
+}
+h1{
+    font-size: 1.5rem;
+}
+main{
+    padding:0 ;
+    min-height: calc(100vh - 60px);
+}
+main> h1{
+    margin-top:20px;
+    margin-bottom: 1.2rem;
+    text-align: center;
+    color: #ff675f;
+}
+.bsc{
+    display: grid;
+    grid-gap: 10px;
+    grid-template-areas:
+    'date description description description description description';
+    grid-template-columns: repeat(6,1fr);
+}
+.date{
+    grid-area: date;
+    height: 135px;
+    width: 135px;
+    margin: 1rem;
+    text-align: center;
+    color: #fff;
+    padding-top: 38px;
+    border: 3px solid #ff675f;
+    border-radius: 50%;
+    background-color: #ff675f;
+}
+
+.description{
+    grid-area: description;
+    width: 95%;
+    height: auto;
+    background-color: #585f73;
+    color: #fff;
+    padding: 10px;
+    margin: 1rem;
+
+}
+
+
+.msc{
+    display: grid;
+    grid-gap: 10px;
+    grid-template-areas:
+    'date2 description2 description2 description2 description2 description2';
+    grid-template-columns: repeat(6,1fr);
+}
+.date2{
+    grid-area: date2;
+    height: 135px;
+    width: 135px;
+    margin: 1rem;
+    text-align: center;
+    color: #fff;
+    padding-top: 38px;
+    border: 3px solid #ff675f;
+    border-radius: 50%;
+    background-color: #ff675f;
+}
+
+.description2{
+    grid-area: description2;
+    width: 95%;
+    height: auto;
+    background-color: #585f73;
+    color: #fff;
+    padding: 10px;
+    margin: 1rem;
+
+}
+
+
+#main-footer{
+    text-align: center;
+    padding: 1.1rem;
+    background: #111;
+    color: #fff;
+    height: 60px;
+}
+
+
+
+/* 4k desktop */
+
+@media screen and (max-width:2560px) {
+    ul li a{
+        padding: 5px;
+        font-size: 2rem;
+    }
+
+    main> h1{
+        margin-top:2.8rem;
+        margin-bottom: 2rem;
+        font-size: 3.7rem;
+    }
+
+    .date{
+        height: 280px;
+        width: 280px;
+        font-size: 2rem;
+        padding-top: 6rem;
+        margin: 2rem;
+    }
+
+
+    .description{
+        padding: 15px;
+        font-size: 2.3rem;
+        margin: 2rem;
+    }
+
+    .description h1{
+        font-size: 3.4rem;
+    }
+
+    .date2{
+        height: 280px;
+        width: 280px;
+        top: 48rem;
+        left: 6rem;
+        font-size: 2rem;
+        padding-top: 6rem;
+        margin: 2rem;
+    }
+
+    .description2{
+        padding: 15px;
+        font-size: 2.3rem;
+        margin: 2rem;
+
+    }
+
+    .description2 h1{
+        font-size: 3.4rem;
+    }
+
+    .description2 h3{
+        font-size: 2.3rem;
+    }
+
+    main{
+        min-height: calc(100vh - 90px);
+    }
+    #main-footer{
+        padding: 1.3rem;
+        font-size: 1.8rem;
+        height: 90px;
+    }
+
+}
+
+/* laptop large */
+
+@media screen and (max-width:1440px) {
+    ul li a{
+        font-size: 1.1rem;
+    }
+
+    main> h1{
+        margin-top:1.3rem;
+        margin-bottom: 1.2rem;
+        text-align: center;
+        font-size: 2rem;
+    }
+    .bsc{
+        margin-bottom: .5rem;
+    }
+    .date{
+        height: 135px;
+        width: 135px;
+        padding-top: 2.5rem;
+        font-size: 1.1rem;
+    }
+
+
+    .description{
+        padding: 10px;
+        font-size: 1rem;
+        margin: 1rem;
+    }
+
+    .description h1{
+        font-size: 1.3rem;
+    }
+
+    .date2{
+        height: 135px;
+        width: 135px;
+        font-size: 1.1rem;
+        padding-top: 2.5rem;
+    }
+
+    .description2{
+        padding: 10px;
+        font-size: 1rem;
+        margin: 1rem;
+
+    }
+
+    .description2 h1{
+        font-size: 1.4rem;
+    }
+
+    .description2 h3{
+        font-size: 1rem;
+    }
+
+    main{
+        min-height: calc(100vh - 50px);
+    }
+    #main-footer{
+        padding: .9rem;
+        font-size: 1rem;
+        height: 50px;
+    }
+
+}
+
+/* laptop */
+
+@media screen and (max-width:1024px) {
+    ul li a{
+        font-size: .7rem;
+        padding: 0;
+    }
+
+    ul li{
+        margin-top: -.3rem;
+    }
+
+    main> h1{
+        margin-top:.9rem;
+        margin-bottom: 1rem;
+        text-align: center;
+        font-size: 1.5rem;
+    }
+    .bsc{
+        margin-bottom: .2rem;
+    }
+    .date{
+        height: 120px;
+        width: 120px;
+        padding-top: 2.3rem;
+        font-size: 1rem;
+        margin: 1rem;
+
+    }
+
+
+    .description{
+        padding: 8px;
+        font-size: .9rem;
+        margin: 1rem;
+    }
+
+    .description h1{
+        font-size: 1.1rem;
+    }
+
+    .date2{
+        height: 120px;
+        width: 120px;
+        font-size: 1rem;
+        padding-top: 2.3rem;
+        margin: 1rem;
+    }
+
+    .description2{
+        padding: 8px;
+        font-size: .9rem;
+        margin: 1rem;
+
+    }
+
+    .description2 h1{
+        font-size: 1.2rem;
+    }
+
+    .description2 h3{
+        font-size: .8rem;
+    }
+
+    main{
+        min-height: calc(100vh - 40px);
+    }
+    #main-footer{
+        padding: .7rem;
+        font-size: .8rem;
+        height: 40px;
+    }
+
+}
+
+/* tablet */
+
+@media screen and (max-width:768px) {
+    ul li a{
+        font-size: .7rem;
+        padding: 0;
+    }
+
+    ul li{
+        margin-top: -.3rem;
+    }
+
+    main> h1{
+        margin-top:1rem;
+        margin-bottom: 1rem;
+        text-align: center;
+        font-size: 1.5rem;
+    }
+
+    .bsc{
+        margin-bottom: 0;
+    }
+
+    .date{
+        height: 110px;
+        width: 110px;
+        padding-top: 2.1rem;
+        font-size: .95rem;
+        margin: 1rem;
+    }
+
+    .description{
+        padding: 8px;
+        font-size: .9rem;
+        margin: 1rem;
+    }
+
+    .description h1{
+        font-size: 1.1rem;
+    }
+
+    .date2{
+        height: 110px;
+        width: 110px;
+        font-size: .95rem;
+        padding-top: 2.1rem;
+        margin: 1rem;
+    }
+
+    .description2{
+        padding: 8px;
+        font-size: .9rem;
+        margin: 1rem;
+
+    }
+
+    .description2 h1{
+        font-size: 1.2rem;
+    }
+
+    .description2 h3{
+        font-size: .8rem;
+    }
+
+    main{
+        min-height: calc(100vh - 35px);
+    }
+    #main-footer{
+        padding: .5rem;
+        font-size: .75rem;
+        height: 35px;
+    }
+
+}
+
+
+/* Mobile large */
+
+@media screen and (max-width:425px) {
+
+        header{
+            visibility: hidden;
+        }
+        .menu-btn{
+            position: absolute;
+            z-index: 3;
+            right: 15px;
+            top: 15px;
+            cursor: pointer;
+
+        }
+        .btn-line{
+            width: 28px;
+            height: 3px;
+            margin: 0 0 5px 0;
+            background-color: #111;
+            border-radius: 55px;
+        }
+
+    main> h1{
+        margin-top:2rem;
+        margin-bottom: 3rem;
+        text-align: center;
+        font-size: 2.2rem;
+    }
+
+    .bsc{
+        display: grid;
+        grid-gap: 10px;
+        grid-template-areas:
+        'date date date'
+        'description description description';
+        grid-template-columns: repeat(3,1fr);
+    }
+
+    .date{
+        height: 110px;
+        width: 110px;
+        margin: 0 auto;
+        padding-top: 2.1rem;
+        font-size: .95rem;
+    }
+
+    .description{
+        padding: 8px;
+        font-size: .9rem;
+        margin-left: 0.7rem;
+        margin-top: 2rem;
+        margin-bottom: 3rem;
+    }
+
+    .description h1{
+        font-size: 1.1rem;
+    }
+
+    .msc{
+        display: grid;
+        grid-gap: 10px;
+        grid-template-areas:
+        'date2  date2 date2'
+        'description2 description2 description2';
+        grid-template-columns: repeat(3,1fr);
+    }
+    .date2{
+        height: 110px;
+        width: 110px;
+        margin: 0 auto;
+        font-size: .95rem;
+        padding-top: 2.1rem;
+    }
+
+    .description2{
+        padding: 8px;
+        font-size: .9rem;
+        margin-left: .7rem;
+        margin-top: 2rem;
+        margin-bottom: 3rem;
+    }
+
+    .description2 h1{
+        font-size: 1.2rem;
+    }
+
+    .description2 h3{
+        font-size: .8rem;
+    }
+
+    main{
+        min-height: calc(100vh - 30px);
+    }
+    #main-footer{
+        padding: .45rem;
+        font-size: .7rem;
+        height: 30px;
+    }
+
+}
+
+
+/* Mobile medium*/
+
+@media screen and (max-width:375px) {
+
+        header{
+            visibility: hidden;
+        }
+        .menu-btn{
+            position: absolute;
+            z-index: 3;
+            right: 15px;
+            top: 15px;
+            cursor: pointer;
+
+        }
+        .btn-line{
+            width: 28px;
+            height: 3px;
+            margin: 0 0 5px 0;
+            background-color: #111;
+            border-radius: 55px;
+        }
+
+    main> h1{
+        margin-top:2rem;
+        margin-bottom: 3rem;
+        text-align: center;
+        font-size: 2.5rem;
+    }
+
+    .bsc{
+        display: grid;
+        grid-gap: 10px;
+        grid-template-areas:
+        'date date date'
+        'description description description';
+        grid-template-columns: repeat(3,1fr);
+    }
+
+    .date{
+        height: 130px;
+        width: 130px;
+        margin: 0 auto;
+        padding-top: 2.2rem;
+        font-size: 1rem;
+    }
+
+    .description{
+        padding: 10px;
+        font-size: .9rem;
+        width: 95%;
+        margin: 0 auto;
+        margin-top: 2rem;
+        margin-bottom: 3rem;
+    }
+
+    .description h1{
+        font-size: 1rem;
+    }
+    .description h2{
+        font-size: .5rem;
+    }
+
+
+    .msc{
+        display: grid;
+        grid-gap: 10px;
+        grid-template-areas:
+        'date2  date2 date2'
+        'description2 description2 description2';
+        grid-template-columns: repeat(3,1fr);
+    }
+    .date2{
+        height: 110px;
+        width: 110px;
+        margin: 0 auto;
+        font-size: .95rem;
+        padding-top: 2.1rem;
+    }
+
+    .description2{
+        padding: 8px;
+        font-size: .9rem;
+        margin-left: .7rem;
+        margin-top: 2rem;
+        margin-bottom: 3rem;
+    }
+
+    .description2 h1{
+        font-size: 1rem;
+        margin-bottom: .5rem;
+    }
+
+    .description2 h3{
+        font-size: .8rem;
+    }
+
+    main{
+        min-height: calc(100vh - 30px);
+    }
+    #main-footer{
+        padding: .4rem;
+        font-size: .7rem;
+        height: 30px;
+    }
+
+}
+
+/* Mobile small*/
+
+@media screen and (max-width:320px) {
+
+        header{
+            visibility: hidden;
+        }
+        .menu-btn{
+            position: absolute;
+            z-index: 3;
+            right: 15px;
+            top: 15px;
+            cursor: pointer;
+
+        }
+        .btn-line{
+            width: 28px;
+            height: 3px;
+            margin: 0 0 5px 0;
+            background-color: #111;
+            border-radius: 55px;
+        }
+
+    main> h1{
+        margin-top:2rem;
+        margin-bottom: 3rem;
+        text-align: center;
+        font-size: 2.5rem;
+    }
+
+    .bsc{
+        display: grid;
+        grid-gap: 10px;
+        grid-template-areas:
+        'date date date'
+        'description description description';
+        grid-template-columns: repeat(3,1fr);
+    }
+
+    .date{
+        height: 130px;
+        width: 130px;
+        margin: 0 auto;
+        padding-top: 2.2rem;
+        font-size: 1rem;
+    }
+
+    .description{
+        padding: 10px;
+        font-size: .9rem;
+        width: 95%;
+        margin: 0 auto;
+        margin-top: 2rem;
+        margin-bottom: 3rem;
+    }
+
+    .description h1{
+        font-size: 1rem;
+    }
+    .description h2{
+        font-size: .5rem;
+    }
+
+
+    .msc{
+        display: grid;
+        grid-gap: 10px;
+        grid-template-areas:
+        'date2  date2 date2'
+        'description2 description2 description2';
+        grid-template-columns: repeat(3,1fr);
+    }
+    .date2{
+        height: 130px;
+        width: 130px;
+        margin: 0 auto;
+        font-size: 1rem;
+        padding-top: 2.2rem;
+    }
+
+    .description2{
+        padding: 10px;
+        font-size: .9rem;
+        width: 95%;
+        margin: 0 auto;
+        margin-top: 2rem;
+        margin-bottom: 3rem;
+    }
+
+    .description2 h1{
+        font-size: 1rem;
+        margin-bottom: .5rem;
+    }
+
+    .description2 h3{
+        font-size: .8rem;
+    }
+
+    main{
+        min-height: calc(100vh - 30px);
+    }
+    #main-footer{
+        padding: .4rem;
+        font-size: .7rem;
+        height: 30px;
+    }
+
+}

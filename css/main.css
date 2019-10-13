@@ -1,0 +1,411 @@
+*{
+    box-sizing: border-box;
+}
+
+/* body */
+
+Body{
+    background-color: #444;
+    color: #fff;
+    margin: 0;
+    height: 100%;
+    font-family: 'segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url(../photo/Sazzad.jpg);
+    background-attachment: cover;
+    background-size: cover;
+    align-items: center;
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+
+}
+body>.overlay{
+    position: absolute;
+    top:auto;
+    right: auto;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+
+/*header nav*/
+
+ul{
+    padding: 0;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+ul li{
+
+    list-style: none;
+    padding: 15px;
+}
+
+ul li a{
+    text-decoration: none;
+    font-size: 1.1rem;
+    color: #fff;
+    position: relative;
+}
+
+ul li a:before{
+    content: '';
+    width: 0;
+    height: 2px;
+    background: #00bcd4;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    transition: .5s;
+}
+
+ul li:hover a:before{
+    width: 50%;
+    transform: translateX(100%);
+    background-color: #4CAF50;
+}
+
+
+h1, h2, h3 {
+    margin: 0;
+    font-weight: 200;
+
+}
+h1{
+    font-size: 2rem;
+}
+
+.lg-heading{
+    font-size: 2.5rem;
+    color: #eece1a;
+}
+
+
+a{
+    color: #fff;
+    text-decoration: none;
+}
+main{
+    padding:0 ;
+    height: 100%;
+}
+#home{
+    overflow: hidden;
+
+}
+main> h1{
+    margin-top:20vh;
+    margin-left: 10px;
+}
+
+/*icons*/
+
+.icons{
+    margin-top: 5rem;
+    margin-left: 1rem;
+}
+.icons >a{
+    padding: .2rem;
+}
+.icons> a:hover{
+    color: #4267b2;
+    transition: all .5s ease-out;
+}
+a.Instagram:hover{
+    color: #C13584;
+    transition: all .5s ease-out;
+}
+
+a.linkedin:hover{
+    color: #0077B5;
+    transition: all .5s ease-in-out;
+}
+
+a.twitter:hover{
+    color: #38A1F3;
+    transition: all .5s ease-in-out;
+}
+
+a.youtube:hover{
+    color: #FF0000;
+    transition: all .5s ease-in-out;
+}
+
+/*4k desktop*/
+
+@media screen and (max-width: 2560px){
+    .lg-heading{
+        font-size: 4rem;
+        margin-left: 1.5rem;
+    }
+
+    ul li a{
+        text-decoration: none;
+        font-size: 2rem;
+        color: #fff;
+        padding: 0;
+        position: relative;
+    }
+
+    .icons{
+        margin-top: 4rem;
+        margin-left: 1.5rem;
+    }
+    .icons >a{
+        padding: .5rem;
+    }
+    .fab{
+        font-size: 2.9rem;
+    }
+
+}
+
+/*large laptop */
+
+@media screen and (max-width: 1440px){
+    .lg-heading{
+        font-size: 2.3rem;
+    }
+
+    ul li a{
+        text-decoration: none;
+        font-size: 1rem;
+        color: #fff;
+        padding: 0;
+        position: relative;
+    }
+
+    .icons{
+        margin-top: 2.5rem;
+        margin-left: 1.9rem;
+    }
+    .icons >a{
+        padding: .3rem;
+    }
+    .fab{
+        font-size: 2rem;
+    }
+
+}
+
+/*laptop */
+
+@media screen and (max-width: 1024px){
+    .lg-heading{
+        font-size: 2.2rem;
+    }
+
+    ul li a{
+        text-decoration: none;
+        font-size: .9rem;
+        color: #fff;
+        padding: 0;
+        position: relative;
+    }
+
+    h1{
+        font-size: 1rem;
+    }
+
+    .icons{
+        margin-top: 1.8rem;
+        margin-left: 2rem;
+    }
+    .icons >a{
+        padding: .3rem;
+    }
+    .fab{
+        font-size: 1.7rem;
+    }
+
+}
+
+/*tablet */
+
+@media screen and (max-width: 768px){
+    .lg-heading{
+        font-size: 2rem;
+        margin-left: 10px;
+    }
+
+    ul li a{
+        text-decoration: none;
+        font-size: .8rem;
+        color: #fff;
+        padding: 0;
+        position: relative;
+    }
+
+    h1{
+        font-size: .8rem;
+    }
+
+    .icons{
+        margin-top: 1.5rem;
+        margin-left: 1rem;
+    }
+    .icons >a{
+        padding: .3rem;
+    }
+    .fab{
+        font-size: 1.4rem;
+    }
+
+}
+
+/*mobile large */
+
+@media screen and (max-width: 425px){
+    body{
+        background-attachment: cover;
+        background-repeat: no-repeat;
+
+    }
+    .lg-heading{
+        font-size: 1.6rem;
+    }
+
+    ul li a{
+        visibility: hidden;
+    }
+
+    .menu-btn{
+        position: absolute;
+        z-index: 3;
+        right: 15px;
+        top: 15px;
+        cursor: pointer;
+
+    }
+    .btn-line{
+        width: 28px;
+        height: 3px;
+        margin: 0 0 5px 0;
+        background-color: #fff;
+        border-radius: 55px;
+    }
+    main> h1{
+        margin-top:15vh;
+        margin-left: 10px;
+        font-size: .8rem;
+    }
+
+
+    .icons{
+        margin-top: 1rem;
+        margin-left: 1rem;
+    }
+    .icons >a{
+        padding: .2rem;
+    }
+    .fab{
+        font-size: 1rem;
+    }
+
+}
+
+/*mobile medium */
+
+@media screen and (max-width: 375px){
+
+    body{
+        background-attachment: cover;
+        background-repeat: no-repeat;
+    }
+    .lg-heading{
+        font-size: 1.3rem;
+    }
+
+    ul li a{
+        visibility: hidden;
+    }
+
+    .menu-btn{
+        position: absolute;
+        z-index: 3;
+        right: 15px;
+        top: 15px;
+        cursor: pointer;
+
+    }
+    .btn-line{
+        width: 28px;
+        height: 3px;
+        margin: 0 0 5px 0;
+        background-color: #fff;
+        border-radius: 55px;
+    }
+    main> h1{
+        margin-top:15vh;
+        margin-left: 10px;
+        font-size: .8rem;
+    }
+
+
+    .icons{
+        margin-top: 1rem;
+        margin-left: 1rem;
+    }
+    .icons >a{
+        padding: .1rem;
+    }
+    .fab{
+        font-size: 1.1rem;
+    }
+
+}
+
+
+/*mobile medium */
+
+@media screen and (max-width: 320px){
+
+    body{
+        background-attachment: cover;
+        background-repeat: no-repeat;
+    }
+    .lg-heading{
+        font-size: 1.3rem;
+    }
+
+    ul li a{
+        visibility: hidden;
+    }
+
+    .menu-btn{
+        position: absolute;
+        z-index: 3;
+        right: 10px;
+        top: 10px;
+        cursor: pointer;
+
+    }
+    .btn-line{
+        width: 28px;
+        height: 3px;
+        margin: 0 0 5px 0;
+        background-color: #fff;
+        border-radius: 55px;
+    }
+    main> h1{
+        margin-top:15vh;
+        margin-left: 10px;
+        font-size: .8rem;
+    }
+
+
+    .icons{
+        margin-top: 1rem;
+        margin-left: 1rem;
+    }
+    .icons >a{
+        padding: .1rem;
+    }
+    .fab{
+        font-size: 1.1rem;
+    }
+
+}
